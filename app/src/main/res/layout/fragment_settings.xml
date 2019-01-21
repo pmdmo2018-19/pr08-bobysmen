@@ -11,6 +11,22 @@
          DENTRO DE UNA AppBarLayout -->
     <!-- ... -->
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/settings_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <!-- AQUÍ ES DONDE SE MOSTRARÁN AUTOMÁTICAMENTE LAS PREFERENCIAS. ES MUY IMPORTANTE
          QUE EL ATRIBUTO android:id TENGA EXACTAMENTE ESTE VALOR. LO DE targetApi ES
          SIMPLEMENTE PARA QUE NO SE QUEJE -->

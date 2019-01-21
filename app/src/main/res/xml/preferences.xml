@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListPreference
+        android:key="@string/pref_listKey"
+        android:title="@string/pref_listTitle"
+        android:summary="Latin"
+        app:useSimpleSummaryProvider="true"
+        android:icon="@drawable/ic_wrap_text_black_24dp"
+        android:entries="@array/pref_listEntries"
+        android:entryValues="@array/pref_listEntryValues"
+        android:defaultValue="@string/pref_listDefaultValue"/>
+
+</PreferenceScreen>
