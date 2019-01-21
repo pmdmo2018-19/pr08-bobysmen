@@ -15,7 +15,6 @@ import es.iessaladillo.pedrojoya.pr08.R;
 
 public class PreferenceFragment extends PreferenceFragmentCompat {
 
-//    private SharedPreferences.OnSharedPreferenceChangeListener onSharedPreferenceChangeListener;
 
     public static PreferenceFragment newInstance(){return new PreferenceFragment();}
 
@@ -28,7 +27,6 @@ public class PreferenceFragment extends PreferenceFragmentCompat {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         setupToolbar(requireView());
-//        onSharedPreferenceChangeListener = (sharedPreferences, key) -> Toast.makeText(getContext(), "Han clickado en la preferencia", Toast.LENGTH_SHORT).show();
     }
 
     private void setupToolbar(View view) {
@@ -41,17 +39,4 @@ public class PreferenceFragment extends PreferenceFragmentCompat {
         }
     }
 
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(
-//                onSharedPreferenceChangeListener);
-//    }
-//
-//    @Override
-//    public void onPause() {
-//        getPreferenceScreen().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(
-//                onSharedPreferenceChangeListener);
-//        super.onPause();
-//    }
 }

@@ -10,7 +10,6 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -25,7 +24,7 @@ import es.iessaladillo.pedrojoya.pr08.utils.FragmentUtils;
 
 public class MainFragment extends Fragment implements SharedPreferences.OnSharedPreferenceChangeListener{
 
-    FloatingActionButton fabDetails;
+    private FloatingActionButton fabDetails;
     private SharedPreferences settings;
     private TextView textLorem;
 
@@ -57,11 +56,6 @@ public class MainFragment extends Fragment implements SharedPreferences.OnShared
         setupToolbar(requireView());
         settings = PreferenceManager.getDefaultSharedPreferences(getContext());
         showLoremText();
-//        onSharedPreferenceChangeListener = (sharedPreferences, key) -> {
-//            Toast.makeText(getContext(), "Han clickado una preferencia", Toast.LENGTH_LONG).show();
-//            textLorem.setText(R.string.main_chiquito_ipsum);
-//            //textLorem.setText(TextUtils.equals(sharedPreferences.getString(getString(R.string.pref_listKey), "latin"), "latin") ? getString(R.string.main_latin_ipsum) : getString(R.string.main_chiquito_ipsum));
-//        };
     }
 
     @Override
@@ -82,14 +76,6 @@ public class MainFragment extends Fragment implements SharedPreferences.OnShared
         inflater.inflate(R.menu.fragment_main, menu);
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        if(item.getItemId() == R.id.mnuSettings){
-//            navigateSettings();
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 
     private void setupFab(View view) {
         fabDetails = ViewCompat.requireViewById(view, R.id.details_fab);
